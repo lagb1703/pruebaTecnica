@@ -22,7 +22,12 @@ export class SearchComponent {
     this.consultar();
   }
 
-  consultar(){
+  /**
+   * contrato: void->void
+   * proposito: consultar la informacion de los productos en la base de datos
+   * y guardarlos en el array productos
+   */
+  consultar():void{
     this.http.get<any[]>('https://643b166f70ea0e66028e8379.mockapi.io/api/v1/productos').subscribe(
       (response) => {
         this.productos = response;

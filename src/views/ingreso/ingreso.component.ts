@@ -17,16 +17,29 @@ export class IngresoComponent {
   botonName:string = "Ingresar";//nombre del boton
   users:usuario[] = [];//aca se gurdara la lista de usuario que llegue tras la peticion
 
+  //se tiene que llamar a los objetos en el contructor
   constructor(private http: HttpClient, private router: Router) {}
 
-  getName(data:string){
+  /**
+   * contrato: string->void
+   * proposito: obtener el valor del input del nombre
+   */
+  getName(data:string):void{
     this.inputsValue[0] = data;
   }
 
-  getPassword(data:string){
+  /**
+   * contrato: string->void
+   * proposito: obtener el valor del input del password
+   */
+  getPassword(data:string):void{
     this.inputsValue[1] = data;
   }
 
+  /**
+   * contrato: void->boolean
+   * proposito: valida que los inputs esten correctamente llenados antes de pasar a la peticion
+   */
   validarFormulario():boolean{
     if(this.inputsValue[0] == ''){
       alert("debes llenar el campo de nombre");
@@ -39,26 +52,29 @@ export class IngresoComponent {
     return true;
   }
 
+  /**
+   * contrato: boolean -> void
+   * proposito: autentifica el usuario.
+   */
   click(data:boolean):void{
-    if(!this.validarFormulario()){
+    if(!this.validarFormulario()){//validamos el formulario
       return;
     }
-    this.http.get<usuario[]>('https://643b166f70ea0e66028e8379.mockapi.io/api/v1/users').subscribe(
+    this.http.get<usuario[]>('https://643b166f70ea0e66028e8379.mockapi.io/api/v1/users').subscribe(//hacemos la consulta
       (response) => {
         this.users = response;
         let i:number = 0;
-        while(this.users[i] != undefined){
-          if(this.users[i].usuario == this.inputsValue[0]){
-            console.log(this.inputsValue[1] == this.users[i].contrasena);//NXkykoYS_grpSPx
-            if(this.users[i].contrasena == this.inputsValue[1]){
+        while(this.users[i] != undefined){//llegamos desde el primer elemente hasta el ultimo antes de undefined
+          if(this.users[i].usuario == this.inputsValue[0]){//comparamos si el nombre es correcto
+            if(this.users[i].contrasena == this.inputsValue[1]){//comparamos si el contraseña es correcto
               alert("bienvenido usuario");
-              this.router.navigate(['']);
+              this.router.navigate(['']);//redirije al princiío
               return;
             }
           }
-          i++;
+          i++;//incrementa
         }
-        alert("usuario o contraseña invalidos");
+        alert("usuario o contraseña invalidos");//no se encontro coincidencia
         return;
       },
       (error) => {
