@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="redireccion()" aria-label="icon-button">
+      <img src="./../../../assets/img/github.svg" alt="My Image" class="imagenLogo">
+    </button>
+    <span routerLink="">Busqueton</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button routerLink="productos" aria-label="icon-button">
+      <mat-icon>apps</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="ingreso" aria-label="icon-button">
+      <mat-icon>group</mat-icon>
+    </button>
+</mat-toolbar>
+<router-outlet></router-outlet>

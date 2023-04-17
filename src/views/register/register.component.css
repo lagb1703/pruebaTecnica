@@ -1,0 +1,42 @@
+.inputs{
+    display: flex;
+    flex-direction: column;
+    margin: 6vh;
+}
+
+.inputs div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.check .mat-checkbox-label{
+    color: black;
+}
+
+.radio{
+    width: 100%;
+    margin: 5vh 0;
+}
+
+.radio h3{
+    text-align: center;
+}
+
+.radio div{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.acepto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 0;
+}
+
+label{
+    color:black;
+}

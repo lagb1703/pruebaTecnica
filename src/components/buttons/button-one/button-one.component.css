@@ -1,0 +1,13 @@
+/*creo la clase button para poder darle estilo a los botones de material*/
+.button{
+  padding: 2vh 2vw;
+  border-radius: 0.5rem;
+}
+
+/*este mediaquery es para evitar que el boton quede muy pequeño en tamaño de celulares*/
+@media (max-width: 500px){
+  .button{
+    padding: 25px 50px;
+    border-radius: 0.5rem;
+  }
+}

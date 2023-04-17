@@ -1,0 +1,7 @@
+.divisor{
+    width: 90%;
+    margin: 10vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

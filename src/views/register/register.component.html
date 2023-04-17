@@ -1,0 +1,41 @@
+<section>
+    <form class="inputs">
+        <div>
+            <app-generic-text [nombre]="inputsNames[0]" [type]="inputsTypes[0]" (outputEvent)="getName($event)"></app-generic-text>
+            <app-generic-text [nombre]="inputsNames[1]" [type]="inputsTypes[0]" (outputEvent)="getLastName($event)"></app-generic-text>
+        </div>
+        <div>
+            <app-generic-text [nombre]="inputsNames[2]" [type]="inputsTypes[0]" (outputEvent)="getUserName($event)"></app-generic-text>
+        </div>
+        <div>
+            <app-generic-text [nombre]="inputsNames[3]" [type]="inputsTypes[1]" (outputEvent)="getPassword($event)"></app-generic-text>
+            <app-generic-text [nombre]="inputsNames[4]" [type]="inputsTypes[1]" (outputEvent)="getSamePassword($event)"></app-generic-text>
+        </div>
+    </form>
+</section>
+<section>
+    <div class="radio">
+        <h3>Genero</h3>
+        <div>
+            <mat-radio-group aria-labelledby="genero" [(ngModel)]="gender" >
+                <mat-radio-button value="hombre">
+                    <label>Hombre</label>
+                </mat-radio-button>
+                <mat-radio-button value="mujer">
+                    <label>Mujer</label>
+                </mat-radio-button>
+                <mat-radio-button value="otro">
+                    <label>Otro</label>
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="acepto">
+        <mat-checkbox class="my-checkbox" [(ngModel)]="checked">
+            <label>Acepto terminos y condiciones</label>
+        </mat-checkbox>
+        <app-button-one [nombre]="botonName" (event)="click($event)" *ngIf="checked"></app-button-one>
+    </div>
+</section>

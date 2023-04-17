@@ -1,0 +1,15 @@
+<section>
+    <form class="inputs">
+        <!--inputs-->
+        <app-generic-text [nombre]="inputsNames[0]" [type]="inputsTypes[0]" (outputEvent)="getName($event)"></app-generic-text>
+        <app-generic-text [nombre]="inputsNames[1]" [type]="inputsTypes[1]" (outputEvent)="getPassword($event)"></app-generic-text>
+    </form>
+</section>
+<section>
+    <div class="acepto">
+        <!--el link que lleva a crear el nuevo usuario-->
+        <a routerLink="/registro">¿Nuevo Usuario?</a>
+        <!--el boton-->
+        <app-button-one [nombre]="botonName" (event)="click($event)"></app-button-one>
+    </div>
+</section>

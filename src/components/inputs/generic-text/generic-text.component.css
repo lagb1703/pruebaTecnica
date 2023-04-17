@@ -1,0 +1,5 @@
+/*esta clase ayuda para darle tamaño de los inputs*/
+.inputClase {
+    min-width: 280px;
+    width: 30vw;
+}

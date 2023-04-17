@@ -1,0 +1,17 @@
+En este documento, podra conoce como estructure el arbol del proyecto, lo primero que
+debera saber es que todo lo que yo he creado esta en la carpeta source
+
+./src
+
+donde encontrara varias carpetas como app, assets, components, utilities y views; primero,
+app es el modulo que se crea por defecto al utilizar el cli de angular, yo nunca lo cambio
+para nada, aunque se podria cambiar si es concecuente, la carpeta assets la utilizo para
+guardar algunas imagenes, como el logo de github que no se encontraba en mat-icons,
+component se guarda la mayoria de los componentes que se reutilizan varias veces,
+utilities se utiliza para guardar cosas que no son modulos ni componentes, para este
+proyecto solo esta guardado dos interfaces que se utilizan para ayudarme a hacer las 
+peticiones y por ultimo views que es donde guardo el modulo donde se enruta el proyecto y
+las paginas ya armadas con todos los componentes en si, aqui hay una excepcion que es 
+toolbar, ya que necesito del enrutamiento en él.
+
+lissto, este es el fin del documento, gracias por leerlo.

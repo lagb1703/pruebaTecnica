@@ -1,0 +1,28 @@
+/*pone el tamaño del contenedor grande, el que encierra todo*/
+.granContenedor{
+    min-width: 300px;
+    min-height: 300px;
+    width: 15vw;
+    height: 20vw;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin: 5vh 0;
+}
+
+/*centra la imagen*/
+.contenedorImagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*le queta el 20% de su tamaño y le da un margin top*/
+.contenedorImagen img{
+    width: 80%;
+    margin-top: 5%;
+}
+
+/*le da separacion al texto del granContenedor*/
+.contenedorTexto{
+    margin: 5%;
+}

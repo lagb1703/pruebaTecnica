@@ -1,0 +1,5 @@
+<section>
+    <div class="divisor">
+        <app-product *ngFor="let producto of productos" [name]="producto.nombre" [price]="producto.precio" [url]="producto.imagen"></app-product>
+    </div>
+</section>

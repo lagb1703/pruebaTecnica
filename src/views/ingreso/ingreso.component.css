@@ -1,0 +1,32 @@
+/*aca se justifican los input para que a cierta distancia se junten*/
+.inputs{
+    width: 100%;
+    margin: 10vh 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*alinea los elementos den forma de columna y se se para un poco de los otros elementos*/
+.acepto{
+    display: flex;
+    flex-direction: column;
+    margin: 10vh 0;
+    align-items: center;
+}
+
+/*agrego mejores estilos para el a*/
+.acepto a{
+    margin: 5vh 0;
+    text-decoration: none;
+    color: black;
+    font-size: 5vw;
+}
+
+/*este mediaquery es para evitar que el a cresca mucho en tamaños de patalla muy grande*/
+@media (min-width: 1000px) {
+    .acepto a{
+        font-size: 2vw;
+    }
+}

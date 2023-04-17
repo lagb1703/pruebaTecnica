@@ -1,0 +1,6 @@
+<mat-form-field class="inputClase">
+    <!--nombre dentro del iinput-->
+    <mat-label>{{nombre}}</mat-label>
+    <!--y el input que tiene varios  para obtener su valores-->
+    <input matInput [(ngModel)]="inputValue" (ngModelChange)="onInputChange()" placeholder={{nombre}} type={{type}}>
+</mat-form-field>
